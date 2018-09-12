@@ -1,0 +1,16 @@
+# OTA programming project
+
+The goal of this project is to be able to flash an arduino mega wirelessly
+
+##Steps for installing ESP
+
+1) flash firmware
+	`./espFirm`
+
+Files in this folder
+espFirm - flash esplink firmware
+formatFlash - completely format esp8266 
+
+
+IP of esp8266
+192.168.0.37

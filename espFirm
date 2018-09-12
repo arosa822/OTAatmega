@@ -1,0 +1,10 @@
+#! /bin/bash
+clear
+echo "Flashing device with firmware"
+
+cd ./esp-link-v3.2.47-g9c6530d
+
+esptool.py --port /dev/ttyUSB0 --baud 230400 write_flash -fs 32m -ff 80m 0x00000 boot_v1.7.bin
+esptool.py --port /dev/ttyUSB0 --baud 230400 write_flash -fs 32m -ff 80m 0x1000 user1.bin
+esptool.py --port /dev/ttyUSB0 --baud 230400 write_flash -fs 32m -ff 80m 0x3FC000 esp_init_data_default.bin
+esptool.py --port /dev/ttyUSB0 --baud 230400 write_flash -fs 32m -ff 80m 0x3FE000 blank.bin

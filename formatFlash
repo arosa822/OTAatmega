@@ -1,0 +1,5 @@
+#! /bin/bash
+clear
+echo "formatting esp8266..."
+
+esptool.py --port /dev/ttyUSB0 erase_flash
